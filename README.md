@@ -32,7 +32,7 @@ Recommended Setup
 Before you can start, you have to download the browscap.ini file and convert it into a cache. There are two ways.
 
 a. Download the file and convert it in two steps. The downloaded file will be stored in a local file, but there is no check
-   if the remote file has changed. If your cache gets corrupted you only need to rerun the `convert` command.
+   if the remote file has changed. If your cache gets corrupted, you only need to rerun the `convert` command.
 
 ```php
 vendor/bin/browscap-php browscap:fetch
@@ -40,13 +40,13 @@ vendor/bin/browscap-php browscap:convert
 ```
 
 b. Download the file and convert it in one step. The downloaded file will not be stored in a local file, but there is a check
-   if the remote file has changed. If your cache gets corrupted you have clean the cache and restart the process.
+   if the remote file has changed. If your cache gets corrupted, you have clean the cache and restart the process.
 
 ```php
 vendor/bin/browscap-php browscap:update
 ```
     
-If you want to autoupdate the used cache, we recommend a separate cron job that calls the command listed above.
+If you want to auto update the used cache, we recommend a separate cron job that calls the command listed above.
 
 What's changed in version 4.x
 -----------------------------
@@ -81,14 +81,14 @@ What's changed in version 3.x
 
 ## Removed features
 
-* the autoupdate function was removed
+* the auto update function was removed
 * all public properties were removed
 
 ## New features
 
-* now it is possible to use other caches than the file cache (see the [WurflCache](https://github.com/mimmi20/WurflCache) package formore information)
+* now it is possible to use other caches than the file cache (see the [WurflCache](https://github.com/mimmi20/WurflCache) package for more information)
 * now it is possible to write your own formatter to change the output format 
-* now it is possbile to set a PSR-3 compatible logger
+* now it is possible to set a PSR-3 compatible logger
 
 Setup Examples
 --------------
@@ -130,7 +130,7 @@ $bc->update(\BrowscapPHP\Helper\IniLoaderInterface::PHP_INI_FULL);
 
 ## Setting up a proxy configuration
 
-If you are behind a proxy or need a spcific configuration, you have to set up a client instance. 
+If you are behind a proxy or need a specific configuration, you have to set up a client instance. 
 See into the [Guzzle documentation](http://docs.guzzlephp.org/en/latest/) for more information about this.
 
 ```php
@@ -192,7 +192,7 @@ vendor/bin/browscap-php browscap:fetch
 ### options
 
 - `cache` (optional) the relative path to your cache directory
-- `remote-file` (optional) only required if you dont want to download the standerd file, possible values are
+- `remote-file` (optional) only required if you don’t want to download the standard file, possible values are
   - `PHP_BrowscapINI` downloads the standard file (default)
   - `Lite_PHP_BrowscapINI` downloads the lite file
   - `Full_PHP_BrowscapINI` downloads the full file
@@ -221,7 +221,7 @@ vendor/bin/browscap-php browscap:update
 
 ### options
 
-- `remote-file`(optional) only required if you dont want to download the standerd file, possible values are
+- `remote-file`(optional) only required if you don’t want to download the standard file, possible values are
   - `PHP_BrowscapINI` downloads the standard file (default)
   - `Lite_PHP_BrowscapINI` downloads the lite file
   - `Full_PHP_BrowscapINI` downloads the full file
